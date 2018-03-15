@@ -1,19 +1,32 @@
-import { Component } from '@angular/core';
+import { Component,EventEmitter,Output  } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
+
 })
+
 export class AppComponent {
-  questions = [
-    {setup: "1+2 is equal to the given value that is", result: "3", hide: true},
-    {setup: "2+2 is equal to the given value that is", result: "4", hide: true},
-    {setup: "1+5 is equal to the given value that is", result: "6", hide: true}
-  ];
+  Questions: Question[];
+  constructor() {
+    this.questions = [
+      {question: "1+2 is equal to the given value that is", answer: "3", hide: true},
+      {question: "2+2 is equal to the given value that is", answer: "4", hide: true},
+      {question: "1+5 is equal to the given value that is", answer: "6", hide: true}
+    ];
+  }
 
   hideAnswer(question){
      question.hide =!question.hide;
   }
+
+  @Output() questionCreated = new EventEmitter<question>();
+
+  createQuestion(question: string, answer: string)
+  {
+    this.questionCreated.emit(new question(question,answer));
+  }
+
 }
 

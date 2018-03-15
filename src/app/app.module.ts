@@ -11,11 +11,12 @@ import { QuestionFormComponentComponent } from './question-form-component/questi
 
 @NgModule({
   declarations: [
+    QuestionFormComponentComponent,
     AppComponent,
     SearchComponentComponent,
     HeaderComponentComponent,
     HomeComponentComponent,
-    QuestionFormComponentComponent
+
   ],
   imports: [
     BrowserModule,
