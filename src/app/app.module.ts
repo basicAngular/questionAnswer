@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { SearchComponentComponent } from './search-component/search-component.component';
 import { HeaderComponentComponent } from './header-component/header-component.component';
 import { HomeComponentComponent } from './home-component/home-component.component';
+import { QuestionFormComponentComponent } from './question-form-component/question-form-component.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { HomeComponentComponent } from './home-component/home-component.componen
     AppComponent,
     SearchComponentComponent,
     HeaderComponentComponent,
-    HomeComponentComponent
+    HomeComponentComponent,
+    QuestionFormComponentComponent
   ],
   imports: [
     BrowserModule,
