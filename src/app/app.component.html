@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card card-block" style="margin-bottom: 10px" *ngFor="let question of questions">
+                <h4 class="card-title">{{question.setup}}</h4>
+                <p class="card-text" [hidden]="question.hide">{{question.result}}</p>
+                <div class="col-lg-4">
+                    <a class="btn btn-success btn-sm" (click)="hideAnswer(question)">Tell Me</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
